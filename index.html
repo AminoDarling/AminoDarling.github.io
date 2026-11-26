@@ -80,10 +80,6 @@
       box-shadow: 0 0 30px rgba(183,161,255,.18);
       background: #29252f;
     }
-    .wings {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      pointer-events: none; filter: drop-shadow(0 2px 6px rgba(0,0,0,.6));
-    }
     .name {
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
@@ -136,11 +132,6 @@
       display: block; color: var(--muted);
       font-weight: 400; margin-top: 3px;
     }
-    .track-cover {
-      width: 62px; height: 62px; flex: 0 0 62px;
-      border-radius: 15px; object-fit: cover;
-      background: #34303a;
-    }
     .socials {
       display: flex; justify-content: center; align-items: center;
       gap: 11px; flex-wrap: wrap;
@@ -163,14 +154,6 @@
     .discord { background: #5865f2; }
     .x { background: #111; border: 1px solid rgba(255,255,255,.15); }
     .pinterest { background: #bd081c; }
-    .views {
-      display: flex; align-items: center; justify-content: flex-start;
-      gap: 7px; width: min(100%, 420px); margin: 0 auto;
-      padding-left: 8px; color: #f3f1f5;
-      font-size: .88rem; font-weight: 650;
-      text-shadow: 0 2px 6px #000;
-    }
-    .eye { width: 18px; height: 18px; fill: currentColor; }
     .footer {
       margin-top: 26px; color: rgba(255,255,255,.55);
       font-size: .75rem; letter-spacing: .04em;
@@ -180,7 +163,7 @@
       .avatar-wrap { width: 122px; height: 122px; }
       .avatar { width: 92px; height: 92px; }
       .music-card { gap: 9px; padding: 10px; border-radius: 21px; }
-      .music-avatar, .track-cover { width: 52px; height: 52px; flex-basis: 52px; }
+      .music-avatar { width: 52px; height: 52px; flex-basis: 52px; }
       .socials { gap: 9px; margin-top: 25px; }
       .social { width: 40px; height: 40px; }
     }
@@ -195,16 +178,6 @@
     <section class="profile" aria-label="AminoDarling profile">
       <div class="avatar-wrap">
         <img class="avatar" src="avatar.png" alt="AminoDarling avatar" />
-        <!-- Decorative feathered wings. Replace or remove if you prefer a plain avatar. -->
-        <svg class="wings" viewBox="0 0 180 180" aria-hidden="true">
-          <g fill="#e8e9ff" stroke="#aaaee4" stroke-width="1.2">
-            <path d="M54 88 C28 72 23 42 34 20 C42 38 48 42 54 47 C48 27 54 13 64 6 C65 29 73 42 79 51 C82 27 93 16 101 13 C97 42 91 62 83 82 L70 111 Z"/>
-            <path d="M126 88 C152 72 157 42 146 20 C138 38 132 42 126 47 C132 27 126 13 116 6 C115 29 107 42 101 51 C98 27 87 16 79 13 C83 42 89 62 97 82 L110 111 Z"/>
-          </g>
-          <g fill="#fff" opacity=".65">
-            <path d="M42 33 L65 72 L53 55 Z"/><path d="M137 33 L115 72 L127 55 Z"/>
-          </g>
-        </svg>
       </div>
 
       <h1 class="name">AminoDarling</h1>
@@ -218,7 +191,6 @@
             <small>Some peace after a long day</small>
           </div>
         </div>
-        <img class="track-cover" src="track-cover.jpg" alt="Music cover" />
       </div>
 
       <nav class="socials" aria-label="Social links">
@@ -242,10 +214,6 @@
         </a>
       </nav>
 
-      <div class="views">
-        <svg class="eye" viewBox="0 0 24 24"><path d="M12 5c-5.5 0-9.7 4.5-11 7 1.3 2.5 5.5 7 11 7s9.7-4.5 11-7c-1.3-2.5-5.5-7-11-7zm0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
-        <span id="views">∞</span>
-      </div>
       <div class="footer">A little corner of the internet · AminoDarling</div>
     </section>
   </main>
